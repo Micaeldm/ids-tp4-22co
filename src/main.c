@@ -32,6 +32,8 @@ SPDX-License-Identifier: MIT
 
 #define LED_ROJO_PUERTO 1
 #define LED_ROJO_BIT    7
+#define LED_VERDE_PUERTO 1
+#define LED_VERDE_BIT    7
 
 /* === Private data type declarations ========================================================== */
 
@@ -51,8 +53,11 @@ int main(void) {
   
 
     gpio_t led_rojo = gpioCreate(LED_ROJO_PUERTO, LED_ROJO_BIT);
+    gpio_t led_verde = gpioCreate(LED_VERDE_PUERTO, LED_VERDE_BIT);
     gpioSetOutput(led_rojo, true);
     gpioSetState(led_rojo, true);
+    gpioSetOutput(led_verde, true);
+    gpioSetState(led_verde, true);
 
     
 }
